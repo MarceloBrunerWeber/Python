@@ -7,6 +7,7 @@ numero = input('Digite um número inteiro: ')
 try:
     numero_int = int(numero)
     numero_par = numero_int % 2 == 0
+    
     print(f'{numero_int} é um número inteiro!')
     if numero_par:
         print(f'{numero_int} é um número par!')
@@ -15,16 +16,14 @@ try:
 except:
     print(f'Por favor, insira um número inteiro.')
 
-
-
 """
 Faça um programa que pergunte a hora ao usuário e, baseando-se no horário descrito, exiba a saudação apropriada. Ex.:
 Bom dia 0-11, Boa tarde 12-17 e Boa noite 18-23.
 """
 hora = input('Olá, que horas são? ')
-horas_do_dia = 1,2,3,4,5,6,7,8,9,10,11
-horas_da_tarde = 12,13,14,15,16,17
-horas_da_noite = 18,19,20,21,22,23
+horas_do_dia = [1,2,3,4,5,6,7,8,9,10,11]
+horas_da_tarde = [12,13,14,15,16,17]
+horas_da_noite = [18,19,20,21,22,23]
 try:
     horas = int(hora)
     if horas in horas_do_dia:
@@ -34,10 +33,9 @@ try:
     elif horas in horas_da_noite:
         print(f"Boa noite, agora são {horas} horas.")
     else:
-        print("Por favor, insira uma hora válida.")
+        print("Por favor, insira uma hora válida entre 0 e 23.")
 except:
     print('Por favor, insira uma hora válida.')
-
 
 
 """
